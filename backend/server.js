@@ -10,7 +10,7 @@ const upload = multer(); // Initialize multer to handle form-data
 // Use CORS middleware
 
 app.use(cors({
-  origin: 'http://localhost:3001', // Replace with your frontend URL
+  origin: '*', // Replace with your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
   credentials: true, // If cookies or auth headers are involved
 }));
