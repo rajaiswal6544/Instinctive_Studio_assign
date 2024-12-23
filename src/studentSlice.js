@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const apiBase = 'http://localhost:3000/api/users'||process.env.REACT_APP_SUPABASE_URL;
+const apiBase = 'http://localhost:3000/api/users'||process.env.REACT_APP_BACKEND_URL + '/api/users';
 
 
 export const fetchStudents = createAsyncThunk('students/fetch', async (_, thunkAPI) => {
