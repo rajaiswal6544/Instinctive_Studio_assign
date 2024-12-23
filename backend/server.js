@@ -11,7 +11,7 @@ const upload = multer(); // Initialize multer to handle form-data
 // Use CORS middleware
 
 app.use(cors({
-  origin: 'https://instinctive-studio-assign-6kqguan2b-rajaiswal6544s-projects.vercel.app/', // Replace with your frontend URL
+  origin: '*', // Replace with your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
   credentials: true, // If cookies or auth headers are involved
 }));
