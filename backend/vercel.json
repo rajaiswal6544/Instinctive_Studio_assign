@@ -4,6 +4,7 @@
     "name": "serverless",
     "buildCommand": "npm install && npm run build",
     "options": {
-      "nodeVersion": "14"  // Adjust Node.js version if needed (check Prisma compatibility)
+      "nodeVersion": "22"  
     }
   }
+}
