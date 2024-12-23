@@ -1,23 +1,9 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "api/**/*.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "client/build/**/*",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "/api/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/client/build/$1"
-      }
-    ]
+  "version": 3,
+  "framework": {
+    "name": "serverless",
+    "buildCommand": "npm install && npm run build",
+    "options": {
+      "nodeVersion": "14"  // Adjust Node.js version if needed (check Prisma compatibility)
+    }
   }
