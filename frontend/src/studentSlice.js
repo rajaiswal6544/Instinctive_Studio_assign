@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const apiBase = process.env.REACT_APP_BACKEND_URL + '/api/users';
+const apiBase = 'https://instinctive-studio-assign-keeh-qudvvv59j.vercel.app/api/users';
 
 
 export const fetchStudents = createAsyncThunk('students/fetch', async (_, thunkAPI) => {
