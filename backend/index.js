@@ -10,9 +10,9 @@ const upload = multer(); // Initialize multer to handle form-data
 // Use CORS middleware
 
 app.use(cors({
-  origin: 'https://frontend-assignment-mjxebnkm1-chirags-projects-388b236c.vercel.app', // Replace with your frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
-  credentials: true, // If cookies or auth headers are involved
+  origin: 'https://frontend-assignment-rust-nu.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 app.use(express.json());
