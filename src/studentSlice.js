@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const apiBase = 'http://localhost:3000/api/users';
+const apiBase = 'https://instinctive-studio-backend.vercel.app/api/users';
 
 // Fetch students
 export const fetchStudents = createAsyncThunk('students/fetch', async (_, thunkAPI) => {
