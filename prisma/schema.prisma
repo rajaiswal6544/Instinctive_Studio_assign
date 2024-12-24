@@ -12,11 +12,28 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
-model students {
-  id         Int      @id @default(autoincrement())
-  name       String
-  cohort     String
-  date_joined DateTime
-  last_login DateTime
-  status     Boolean
+model Course {
+  id     Int      @id @default(autoincrement())
+  name   String   @db.VarChar
+  studentCourses StudentCourse[]
+}
+
+model StudentCourse {
+  id        Int      @id @default(autoincrement())
+  studentId Int
+  courseId  Int
+  student   Student  @relation(fields: [studentId], references: [id])
+  course    Course   @relation(fields: [courseId], references: [id])
+
+  @@unique([studentId, courseId])
+}
+
+model Student {
+  id        Int      @id @default(autoincrement())
+  name      String
+  cohort    String
+  dateJoined DateTime
+  lastLogin  DateTime
+  status    Boolean
+  studentCourses StudentCourse[]
 }
